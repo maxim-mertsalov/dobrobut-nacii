@@ -40,7 +40,7 @@ h1{
     line-height: clamp(1.28em, 5vw, 72px);
 }
 h2{
-    font-size: 42px;
+    font-size: clamp(1.75em, 5vw, 38px);
 }
 h3{
     font-size: 20px;
@@ -261,9 +261,94 @@ section.intro{
     width: 100%;
 }
 
+
+.cards-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    row-gap: 30px;
+    margin-top: 45px;
+}
+.card{
+    width: 31.75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+
+    line-height: 28px;
+
+    box-shadow: -10px 30px 70px rgba(219, 222, 225, 0.4);
+}
+.card.active{
+    color: #fff;
+    background-color: #4C40F7;
+    box-shadow: -10px 30px 70px rgba(76, 64, 247, 0.5);
+}
+.card .card-img{
+    width: 96px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.card:nth-child(1) > .card-img{
+    background: #fff;
+    filter: drop-shadow(0px 15px 30px #372DBC);
+}
+.card:nth-child(2) > .card-img{
+    background: #FF2D59;
+    filter: drop-shadow(0px 15px 30px rgba(255, 45, 89, 0.4));
+}
+.card:nth-child(3) > .card-img{
+    background: #4C40F7;
+    filter: drop-shadow(0px 15px 30px rgba(76, 64, 247, 0.4));
+}
+.card:nth-child(4) > .card-img{
+    background: #FFC700;
+    filter: drop-shadow(0px 15px 30px rgba(255, 204, 0, 0.4));
+}
+.card:nth-child(5) > .card-img{
+    background: #007BFF;
+    filter: drop-shadow(0px 15px 30px rgba(0, 123, 255, 0.4));
+}
+.card:nth-child(6) > .card-img{
+    background: #FF6800;
+    filter: drop-shadow(0px 15px 30px rgba(255, 104, 0, 0.4));
+}
+.card-btn{
+    background: #F3F4F6;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all .1s linear;
+}
+.card-btn:hover{
+    background: #e8e7e7;
+}
+.card-btn svg{
+    width: 20px;
+    height: auto;
+}
+
 @media (max-width:1200px) {
     .intro-img{
         right: -14%;
+    }
+}
+
+@media (max-width:850px) {
+    .card{
+        width: 49%;
+        max-width: 400px;
     }
 }
 
@@ -291,5 +376,15 @@ section.intro{
     }
     .logo{
         font-size: 22px;
+    }
+}
+
+@media (max-width:600px) {
+    .card{
+        width: 99%;
+        max-width: 500px;
+    }
+    .cards-wrapper{
+        justify-content: center;
     }
 }
