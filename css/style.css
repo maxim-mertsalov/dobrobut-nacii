@@ -686,6 +686,35 @@ footer>div:first-child{
     .prefooter{
         padding: 30px 50px 40px;
     }
+    .galary-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-gap: 16px;
+    }
+    .gl-img.item3{
+        grid-row-start: 6;
+        grid-row-end: 10;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .gl-img.item4{
+        grid-row-start: 3;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .gl-img.item5{
+        grid-row-start: 4;
+        grid-row-end: 7;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .gl-img.item6{
+        grid-row-start: 7;
+        grid-row-end: 10;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
 }
 
 @media (max-width:600px) {
