@@ -644,7 +644,7 @@ section.whywe{
 /* GRAFIC BLOCK */
 section.grafic{
     background: #F9F9FD;
-    padding: 100px 0;
+    padding: 100px 0 160px;
 }
 section.grafic > div{
     position: relative;
@@ -713,17 +713,23 @@ section.grafic > div{
     }
 }
 
-/*
-.swiper-pagination-bullet{
-    display: block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #000;
-} 
-.swiper-pagination-bullet-active{
-    background: #007BFF;
-} */
+
+/* End Block */
+.end-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFC700;
+    padding: 60px 0 80px;
+    border-radius: 20px;
+}
+.end-block h3, .end-block h2{
+    color: #fff;
+}
+.end-block .btn{
+    margin-top: 32px;
+}
+
 
 /* Footer */
 footer{
