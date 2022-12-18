@@ -49,6 +49,11 @@ h3{
     font-size: 20px;
 }
 
+.in-center{
+    display: flex;
+    justify-content: center;
+}
+
 /* Text block */
 .text-block{
     text-align: center;
@@ -586,6 +591,7 @@ section.whywe{
     flex-direction: column;
     gap: 32px;
     margin-top: 60px;
+    margin-bottom: 56px;
 }
 .acc{
     padding: 0 32px;
@@ -635,6 +641,89 @@ section.whywe{
 }
 
 
+/* GRAFIC BLOCK */
+section.grafic{
+    background: #F9F9FD;
+    padding: 100px 0;
+}
+section.grafic > div{
+    position: relative;
+}
+.grafic-wrapper{
+    margin-top: 56px;
+    position: relative;
+    overflow: hidden;
+}
+.slider{
+   width: auto;
+}
+.slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 38px 26px 34px;
+    background: #fff;
+    /* width: 33% !important; */
+    max-width: calc(33% - 15px + 1px);
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin: 0 7.5px;
+}
+.swiper-pagination{
+    position: static !important;
+    transform: none !important;
+    margin: 20px auto 0;
+}
+.slider-prev::after, .slider-next::after{
+    font-size: 12px !important;
+}
+.slider-prev, .slider-next{
+    top: 60% !important;
+    border-radius: 50%;
+    background: #4C40F7;
+    color: #fff !important;
+    width: 45px !important;
+    height: 45px !important;
+    transition: all .1s;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+    background: #FFFFFF;
+    color: #ABAFC7 !important;
+    opacity: 1 !important;
+}
+.slider-prev{
+    left: -52px !important;
+}
+.slider-next{
+    right: -52px !important;
+}
+
+.slider-prev:hover, .slider-next:hover{
+    filter: brightness(0.85);
+}
+@media (max-width: 1225px) {
+    .slider-next{
+        right: 6px !important;
+    }
+    .slider-prev{
+        left: 6px !important;
+    }
+}
+
+/*
+.swiper-pagination-bullet{
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000;
+} 
+.swiper-pagination-bullet-active{
+    background: #007BFF;
+} */
 
 /* Footer */
 footer{
@@ -785,6 +874,11 @@ footer>div:first-child{
         width: 100%;
     }
 }
+@media (max-width:950px) {
+    .slide{
+        max-width: calc(50% - 15px);
+    }
+}
 @media (max-width:850px) {
     .card{
         width: 49%;
@@ -875,6 +969,9 @@ footer>div:first-child{
     .company-wrapper{
         flex-direction: column;
         gap: 20px;
+    }
+    .slide{
+        max-width: calc(100% - 15px);
     }
 }
 
