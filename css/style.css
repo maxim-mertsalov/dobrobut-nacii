@@ -30,6 +30,9 @@ main{
     gap: 200px;
     align-items: center;
 }
+section{
+    width: 100%;
+}
 
 a{
     text-decoration: none;
@@ -547,6 +550,92 @@ section.whywe{
     width: 100%;
 }
 
+
+/* QUOTES BLOCK */
+.qw{
+    color: #fff;
+    background: #FE9602;
+    
+}
+.qw-wrapper{
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    margin-inline: auto;
+    text-align: center;
+    font-size: 18px;
+    padding: 100px 0;
+}
+.qw-img svg{
+    box-shadow: -10px 15px 30px rgba(253, 52, 110, 0.301961);
+}
+.qw-body{
+    font-size: 24px;
+}
+.qw-name{
+    margin-bottom: 4px;
+}
+
+
+/* Qwestions block */
+.accardion-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 60px;
+}
+.acc{
+    padding: 0 32px;
+    border: 2px solid #4C40F7;
+    border-radius: 8px;
+    font-size: 16px;
+    overflow: hidden;
+    /* max-height: calc(64px + 24px); */
+    transition: all .25s;
+}
+.acc-header{
+    display: flex;
+    line-height: 24px;
+    justify-content: space-between;
+    padding: 32px 0;
+}
+.acc-content{
+    padding-bottom: 0;
+    padding-top: 0;
+    border: 0px;
+    
+    color: #6B6B6B;
+    transition: all .25s;
+    max-height: 0px;
+    overflow: hidden;
+}
+.acc-arrow{
+    transition: all .25s;
+}
+.acc.active .acc-content{
+    max-height: 500px;
+    border-top: 1px solid #D8D8D8;
+    padding-top: 28px;
+    padding-bottom: 32px;
+}
+.acc.active .acc-arrow svg{
+    transform: rotate(180deg);
+}
+/* .acc.active{
+    border: 2px solid #4C40F7;
+    max-height: 500px;
+} */
+.acc:not(.active){
+    cursor: pointer;
+    /* max-height: calc(64px + 24px) !important; */
+    border: 1px solid #D8D8D8;
+}
+
+
+
 /* Footer */
 footer{
     position: relative;
@@ -676,6 +765,10 @@ footer>div:first-child{
 .af-link:hover{
     opacity: 1;
 }
+
+
+
+/* ---MEDIA--- */
 @media (max-width:1200px) {
     .intro-img{
         right: -14%;
