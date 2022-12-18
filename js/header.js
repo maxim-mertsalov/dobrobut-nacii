@@ -1,6 +1,7 @@
 const body = document.body;
 const scrollUp = "scroll-up";
 const scrollDown = "scroll-down";
+const header = document.querySelector(".header");
 let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
@@ -28,5 +29,7 @@ window.addEventListener("scroll", () => {
 burger = document.getElementById("nav-icon")
 
 burger.addEventListener("click", () => {
-  burger.classList.toggle("open")
-})
+  burger.classList.toggle("open");
+  header.classList.toggle("active");
+  document.documentElement.classList.toggle("fixed");
+});
