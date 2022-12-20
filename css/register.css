@@ -1,0 +1,244 @@
+/* REGISTER FORM */
+section.personal{
+    margin-top: 100px;
+}
+.star{
+    color: red;
+}
+.f-col-img{
+    width: 50%;
+}
+.f-col-img svg{
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .f-col-img{
+        display: none;
+    }
+    .wrapper-col2 > div{
+        width: 100%;
+    }
+    .wrapper-col2{
+        flex-direction: column;
+    }
+}
+.f-title{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: -0.1px;
+    color: #111029;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.input-text-group label{
+    display: block;
+    margin-bottom: 15px;
+}
+.input-text-group input[type="text"], .input-text-group input[type="tel"]{
+    display: block;
+    width: 100%;
+    padding: 20px 28px;
+    color: #000000;
+    border-radius: 11px;
+    border: 1px solid #D8D8D8;
+    font-size: 18px;
+    line-height: 32px;
+    transition: all .2s;
+}
+.input-text-group input[type="text"]:focus, .input-text-group input[type="tel"]:focus,
+.input-text-group input[type="text"]:focus-visible .input-text-group input[type="tel"]:focus-visible{
+    border: 2px solid #4C40F7 !important;
+    padding: 19px 27px;
+    outline: none;
+}
+.input-text-group input::placeholder{
+    color: #ABAFC7;
+}
+
+.input-phone{
+    position: relative;
+    color: #ABAFC7;
+}
+.ch38{
+    color: #000000;
+    position: absolute;
+    top: 31%;
+    left: 30px;
+}
+.input-phone input{
+    letter-spacing: 1px;
+}
+.tel-num{
+    padding-left: 70px !important;
+}
+label[for="phone"] > p{
+    margin-bottom: 15px;
+}
+label[for="phone"]{
+    margin-bottom: 0;
+}
+
+.wrapper-col2{
+    margin-top: 32px;
+}
+:root {
+    --color-primary: #4C40F7;
+    --color-subtle: #b0b0b0;
+}
+
+
+label.check, .check label {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+}
+.chose-input{
+    margin-top: 32px;
+}
+.chose-input p{
+    margin-bottom: 15px;
+}
+.check input[type=checkbox],
+.check input[type=radio] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    height: 24px;
+    width: 24px;
+    min-width: 24px;
+    background: #fff;
+    border: 2px solid var(--color-subtle);
+    margin: 0 8px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline-offset: 5px;
+    outline-color: var(--color-subtle);
+}
+.check input[type=checkbox]:disabled,
+.check input[type=radio]:disabled {
+    opacity: 0.7;
+    background: var(--color-subtle);
+    cursor: not-allowed;
+}
+.check input[type=checkbox]:after,
+.check input[type=radio]:after {
+    content: "";
+    display: block;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+}
+.check input[type=checkbox]:checked:after,
+.check input[type=radio]:checked:after {
+    transform: scale(1);
+}
+  
+.check input[type=checkbox] {
+    border-radius: 5px;
+}
+.check input[type=checkbox]:after {
+    width: 16px;
+    height: 16px;
+}
+.check input[type=checkbox]:checked {
+    border: none;
+    background-color: var(--color-primary, #dfdfdf);
+}
+.check input[type=checkbox]:checked:after {
+    content: url("data:image/svg+xml, <svg viewBox='0 0 16 15' xmlns='http://www.w3.org/2000/svg'><path fill='white' d='M15.25.847a1.51 1.51 0 0 1 .405 2.096L8.106 14.11a1.944 1.944 0 0 1-2.94.329L.6 10.156a1.51 1.51 0 1 1 2.067-2.202l3.645 3.42 6.841-10.122a1.51 1.51 0 0 1 2.098-.405Z'/></svg>");
+}
+  
+.check input[type=radio] {
+    border-radius: 20px;
+}
+.check input[type=radio]:after {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+}
+.check input[type=radio]:checked {
+    border-color: var(--color-primary);
+}
+.check input[type=radio]:checked:after {
+    background-color: var(--color-primary);
+}
+
+.mt-30{
+    margin-top: 30px !important;
+}
+.input-telegram{
+    position: relative;
+}
+.input-telegram span{
+    position: absolute;
+    top: 30%;
+    left: 6%;
+}
+.input-telegram input{
+    padding-left: 48px !important;
+}
+label[for="telegram"] p {
+    margin-bottom: 15px;
+}
+
+
+.info-text{
+    display: flex;
+    gap: 7px;
+    font-size: 16px;
+    color: #6D6D6D;
+    margin-bottom: 30px;
+    margin-top: 8px;
+}
+.info-text > .icon{
+    margin-top: 5px;
+}
+
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.second{
+    margin-top: 120px;
+}
+.inputs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 4px 5px;
+    background: #FFFFFF;
+    border: 2px solid #D8D8D8;
+    border-radius: 13px;
+    width: fit-content;
+    margin-top: 8px;
+}
+
+.inputs label{
+    padding: 20px 38px;
+    background: #fff;
+    border: 2px solid #D8D8D8;
+    border-radius: 11px;
+    transition: all .1s;
+}
+.inputs input:checked + label{
+    background: #4C40F7;
+    color: #fff;
+    border-color: #4C40F7;
+}
+.inputs input{
+    position: absolute;
+    opacity: 0;
+}
+
+.dop{
+    font-size: 16px;
+    color: #6D6D6D;
+    margin-bottom: 15px;
+}
