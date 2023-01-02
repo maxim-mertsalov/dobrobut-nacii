@@ -34,11 +34,14 @@ html.fixed body{
 main{
     display: flex;
     flex-direction: column;
-    gap: 200px;
+    gap: 160px;
     align-items: center;
+    overflow: hidden;
+    padding-bottom: 200px;
 }
 section{
     width: 100%;
+    position: relative;
 }
 
 a{
@@ -64,6 +67,8 @@ h3{
 /* Text block */
 .text-block{
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 .text-block > h3{
     color: #FF2D59;
@@ -95,6 +100,8 @@ h3{
     filter: drop-shadow(-15px 10px 30px rgba(76, 64, 247, 0.25));
     transition: all .1s linear;
     line-height: 26px;
+    position: relative;
+    z-index: 2;
 }
 .btn:hover{
     background: #6f65f6;
@@ -144,13 +151,13 @@ h3{
     color: var(--text-sc-color);
     transition: all .1s;
 }
-.nav > li.active{
+.nav > li.active a{
     color: var(--text-pr-color);
 }
-.nav > li:hover{
+.nav > li a:hover{
     color: var(--text-sc-color-hv);
 }
-.nav > li.active:hover{
+.nav > li.active a:hover{
     color: var(--text-pr-color-hv);;
 }
 /* Hider header */
@@ -289,13 +296,26 @@ h3{
     transform: translateY(-250%);
 }
 
+/* -- DECORATIONS -- */
+.decoration{
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.intro-decoration{
+    top: 10%;
+    width: 100%;
+}
+.decoration svg{
+    width: 100%;
+    height: auto;
+}
 
 
 /* Intro block */
 section.intro{
     min-height: 820px;
-    /* height: 100vh; */
-    overflow: hidden;
+    width: 100vw;
 }
 .intro-wrapper{
     display: flex;
@@ -329,7 +349,6 @@ section.intro{
     width: 100%;
 }
 
-
 .cards-wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -337,6 +356,7 @@ section.intro{
     justify-content: space-between;
     row-gap: 30px;
     margin-top: 45px;
+    position: relative;
 }
 .card{
     width: 31.75%;
@@ -348,9 +368,14 @@ section.intro{
     border-radius: 20px;
     text-align: center;
 
+    background: #fff;
+
     line-height: 28px;
 
     box-shadow: -10px 30px 70px rgba(219, 222, 225, 0.4);
+
+    position: relative;
+    z-index: 1;
 }
 .card.active{
     color: #fff;
@@ -406,7 +431,19 @@ section.intro{
     width: 20px;
     height: auto;
 }
+.whatwedo-decoration{
+    top: 25%;
+}
 
+
+section.video{
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+section.video > .container{
+    position: relative;
+    z-index: 2;
+}
 /* Video block */
 .video-wrapper{
     margin-top: 50px;
@@ -467,6 +504,22 @@ div.video-play-btn:hover{
     border-radius: 20px;
 }
 
+.video-decoration{
+    display: flex;
+    top: 30%;
+    z-index: 1;
+}
+.video-decoration > div{
+    width: 60%;
+    position: absolute;
+}
+.right{
+    right: 0;
+}
+.left{
+    left: 0;
+    width: 80% !important;
+}
 
 /* Why We Block */
 section.whywe{
@@ -513,6 +566,7 @@ section.whywe{
 }
 .ww-card h1{
     margin-bottom: 20px;
+    font-size: 54px;
 }
 .ww-card p{
     color: #6B6B6B;
@@ -564,6 +618,8 @@ section.whywe{
 .gl-img{
     overflow: hidden;
     border-radius: 6px;
+    position: relative;
+    z-index: 2;
 }
 .gl-img.item1{
     grid-row-start: 1;
@@ -601,6 +657,10 @@ section.whywe{
     grid-column-start: 3;
     grid-column-end: 4;
 }
+.galary-decoration{
+    top: 30%;
+    z-index: 1;
+}
 
 
 /* Companies block */
@@ -620,6 +680,8 @@ section.whywe{
 .qw{
     color: #fff;
     background: #FE9602;
+    position: relative;
+    z-index: 2;
     
 }
 .qw-wrapper{
@@ -646,6 +708,23 @@ section.whywe{
 
 
 /* Qwestions block */
+.questions-decoration{
+    z-index: 1;
+    top: 0;
+    display: flex;
+}
+.questions-decoration > div{
+    position: absolute;
+    /* width: 50%; */
+}
+.leftq{
+    left: -10%;
+}
+.rightq{
+    right: 0;
+    margin-top: -28%;
+}
+
 .accardion-wrapper{
     display: flex;
     flex-direction: column;
@@ -659,8 +738,11 @@ section.whywe{
     border-radius: 8px;
     font-size: 16px;
     overflow: hidden;
+    background: #fff;
     /* max-height: calc(64px + 24px); */
     transition: all .25s;
+    position: relative;
+    z-index: 2;
 }
 .acc-header{
     display: flex;
@@ -789,7 +871,9 @@ section.grafic > div{
 .end-block .btn{
     margin-top: 32px;
 }
-
+.end-decoration{
+    top: -20%;
+}
 
 /* Footer */
 footer{
@@ -840,7 +924,7 @@ footer>div:first-child{
     padding-top: 250px;
     position: relative;
     z-index: 2;
-    margin-top: 350px;
+    margin-top: 150px;
 }
 .footer-wrapper{
     display: flex;
@@ -924,9 +1008,24 @@ footer>div:first-child{
 
 
 /* ---MEDIA--- */
+
+@media (min-width: 1600px) {
+    .video-decoration{
+        top: 16%;
+    }
+}
 @media (max-width:1200px) {
     .intro-img{
         right: -14%;
+    }
+}
+@media (max-width: 1150px) {
+    .leftq{
+        width: 50%;
+    }
+    .rightq{
+        width: 30%;
+        margin-top: -52%;
     }
 }
 @media (max-width:950px) {
@@ -939,8 +1038,6 @@ footer>div:first-child{
     .ww-statistics{
         width: 100%;
     }
-}
-@media (max-width:950px) {
     .slide{
         max-width: calc(50% - 15px);
     }
@@ -991,7 +1088,8 @@ footer>div:first-child{
     .intro-img{
         position: static;
         margin-top: 10vh;
-        width: 100%;
+        width: 110%;
+        margin-left: -6.5%;
     }
     .intro-text{
         margin-top: 0;
@@ -1044,6 +1142,14 @@ footer>div:first-child{
     .slide{
         max-width: calc(100% - 15px);
     }
+    .intro-decoration {top: 100vh;}
+    .whatwedo-decoration{top: 15%;}
+    .leftq{
+        margin-top: 26%;
+    }
+    .rightq {
+        margin-top: -62%;
+    }
 }
 
 @media (max-width:600px) {
@@ -1060,5 +1166,11 @@ footer>div:first-child{
     .ww-card{
         width: 100%;
         margin: 0 !important;
+    }
+}
+
+@media (max-height: 400px) {
+    .mobile-menu a.btn{
+        display: none;
     }
 }
